@@ -1,0 +1,112 @@
+---
+#title: "Ahenk's Final Package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Ahenk_FinalPackage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+  
+  
+)
+```
+# AHENK'S FINAL PACKAGE - JAN 2022
+
+<style type="text/css">
+  
+  body {
+    
+     background-image: url("https://st.depositphotos.com/3272633/5161/v/380/depositphotos_51613015-stock-illustration-abstract-geometric-triangle-background-neutral.jpg?forcejpeg=true");
+   background-repeat: repeat;
+   
+}
+</style>
+
+
+
+## Introduction
+  This package contains 3 functions, written by Ahenk and curated into a package.
+  They are as following.
+
+
+1. isAllUnique
+1. isPermPalindrome
+1. missingNOs
+
+## Functions
+### 1. isAllUnique
+  It takes a string as an argument and checks whether all the characters are unique(there are no duplicates of any letter)  
+  If all the characters are unique, it prints out "All unique"
+  If it finds and duplicate characters it prints out "Duplicates found."  
+  Doesn't return anything. It only prints out to the console.  
+  It is CaSe SeNSiTiVe. That means a and A won't be processed as same letters.   
+
+### Ex.  
+
+    ExampleString<-"AaBCD"
+    isAllUnique(ExampleString)
+
+    "All unique"
+</div>
+  ------------------------------------
+
+    ExampleString2<-"ABA"
+    isAllUnique(ExampleString2)
+
+    "Duplicates Found."  
+ 
+### 2. isPermPalindrome
+  It takes a string as an argument and returns true if the string is a permutation of a palindrome.  
+  If its not a permutation of a palindrome, it returns false.  
+  It is CaSe SeNSiTiVe. That means a and A won't be processed as same letters.  
+  
+### Ex.    
+  * **isPermPalindrome("kayak")** returns true  
+  * **isPermPalindrome("yakak")** returns true  
+  * **isPermPalindrome("yaKak")** returns false  
+ 
+### 3. missingNOs
+  It takes a list as an argument containing integers from 1 to 100.  
+  You can exclude any amount of numbers from the list.  
+  It checks and prints the missing numbers on the console.  
+  It can only work with integers from 1-100 and DOESN'T WORK with letters or symbols.  
+  
+### Ex  
+  Setting up a dummy list.  
+  
+    p1<-c(1:45)
+    p2<-c(47:82)
+    p3<-c(90:98)
+    GivenList<-c(p1,p2,p3)
+
+  Sending the dummy list to the function.  
+    **`missingNOs(GivenList)`**
+
+  Output on console:  
+  
+  `[1] 46
+[1] 83
+[1] 84
+[1] 85
+[1] 86
+[1] 87
+[1] 88
+[1] 89
+[1] 99
+[1] 100`
+
+
+## How Can You Make It Work?
+ Package exists on https://github.com/AhenkEU/AhenkFinalPackage 
+ To install and use the package, you can run the codes below.  
+ 
+```
+install_github("AhenkEU/AhenkFinalPackage")
+library(FinalPackageAhenk)
+
+```
