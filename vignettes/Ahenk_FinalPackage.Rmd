@@ -28,7 +28,9 @@ knitr::opts_chunk$set(
 </style>
 
 
-
+**Ahenk ER UĞURCAN**  
+**2021850008**  
+  
 ## Introduction
   This package contains 3 functions, written by Ahenk and curated into a package.
   They are as following.
